@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="GadgetCare — layanan servis HP panggilan dengan pemesanan mudah dan informasi biaya yang jelas.">
+  <title>GadgetCare | Abdul Azis</title>
+  <style>
+    :root{--red:#ff403b;--red-dark:#d92828;--black:#080808;--panel:#111;--white:#f7f7f7;--muted:#b7b7b7}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;overflow-x:hidden}
+    a{color:inherit}
+    .page{position:relative;isolation:isolate;min-height:100vh;display:flex;flex-direction:column}
+    .page:before{content:"";position:absolute;z-index:-1;top:-95px;left:-95px;width:300px;height:230px;background:var(--red);transform:rotate(-38deg);border-radius:20px}
+    .page:after{content:"";position:absolute;z-index:-1;bottom:-115px;right:-75px;width:310px;height:210px;background:var(--red);transform:rotate(-35deg);clip-path:polygon(0 0,100% 0,100% 35%,55% 35%,55% 60%,20% 60%,20% 100%,0 100%)}
+    header{width:min(1120px,100%);margin:auto;padding:28px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .brand-logo{width:78px;height:64px;object-fit:contain;flex-shrink:0}
+    .brand-name{font-weight:900;font-size:17px;letter-spacing:1.5px}.brand-name span{display:block;color:var(--muted);font-size:10px;letter-spacing:3px;margin-top:3px}
+    .top-link{font-size:13px;text-decoration:none;border:1px solid #ffffff28;border-radius:999px;padding:11px 17px;transition:.2s}.top-link:hover{border-color:var(--red);color:var(--red)}
+    main{width:min(1120px,100%);margin:auto;padding:20px 24px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center;flex:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--red);font-size:12px;letter-spacing:2.7px;font-weight:850;text-transform:uppercase}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 15px var(--red)}
+    h1{font-size:clamp(48px,7vw,90px);line-height:.91;letter-spacing:-5px;margin:24px 0 22px;font-weight:1000}
+    h1 span{display:block;color:var(--red);-webkit-text-stroke:1px var(--red)}
+    .intro{font-size:17px;line-height:1.8;color:#d0d0d0;max-width:590px;margin:0 0 28px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;padding:15px 22px;border-radius:999px;font-weight:850;font-size:14px;transition:transform .2s,background .2s}
+    .btn:hover{transform:translateY(-3px)}
+    .btn-primary{background:var(--red);color:white;box-shadow:0 10px 32px #ff403b30}.btn-primary:hover{background:var(--red-dark)}
+    .btn-secondary{border:1px solid #ffffff35;background:#ffffff08}
+    .socials{display:flex;gap:12px;margin-top:34px;align-items:center}
+    .social{width:46px;height:46px;display:grid;place-items:center;border-radius:50%;background:var(--red);color:#080808;text-decoration:none;transition:.2s}
+    .social:hover{transform:translateY(-4px) scale(1.04);background:white}
+    .social svg{width:23px;height:23px;fill:currentColor}.social-image{background:transparent;overflow:hidden}.social-image img{width:100%;height:100%;object-fit:contain;display:block}.social-image:hover{background:transparent}.social-image:hover img{transform:scale(1.08)}
+    .social-label{color:#888;font-size:12px;margin-left:5px}
+    .visual{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center}
+    .halo{position:absolute;width:min(410px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#ff403b2b 0%,#ff403b0b 48%,transparent 70%);border:1px solid #ff403b30}
+    .tech-card{position:relative;width:min(370px,100%);padding:34px 28px 30px;border-radius:28px;background:linear-gradient(145deg,#191919,#0c0c0c);border:1px solid #ffffff1b;box-shadow:0 30px 100px #0009;text-align:center;overflow:hidden}
+    .tech-card:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--red),#ff8878,var(--red))}
+    .avatar{display:block;width:auto;max-width:100%;height:265px;object-fit:contain;margin:0 auto 14px;filter:drop-shadow(0 14px 24px #0008)}
+    .tech-card h2{font-size:28px;margin:0 0 8px;letter-spacing:-.8px}.role{color:var(--red);font-weight:800;font-size:11px;letter-spacing:2.4px;text-transform:uppercase}
+    .card-rule{height:1px;background:#ffffff16;margin:23px 0}
+    .service-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+    .point{padding:12px;border-radius:13px;background:#ffffff06;color:#ddd;font-size:12px;line-height:1.5}
+    .point b{display:block;color:white;font-size:13px;margin-bottom:3px}
+    .point-icon{color:var(--red);font-size:16px;margin-right:5px}
+    .floating-tag{position:absolute;right:-5px;top:70px;background:#151515;border:1px solid #ffffff20;padding:12px 15px;border-radius:14px;font-size:12px;font-weight:800;box-shadow:0 10px 30px #0008}
+    .floating-tag span{color:var(--red)}
+    footer{width:min(1120px,100%);margin:0 auto;padding:18px 24px 25px;color:#858585;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    footer a{color:#ccc;text-decoration:none}
+    @media(max-width:800px){header{padding:22px 20px}main{grid-template-columns:1fr;gap:20px;padding:28px 20px 50px}.hero-copy{text-align:center}.intro{margin-left:auto;margin-right:auto;font-size:15px}.actions,.socials{justify-content:center}h1{letter-spacing:-3px;margin-top:20px}.visual{min-height:420px}.tech-card{max-width:360px}.floating-tag{right:0;top:45px}footer{padding:18px 20px;justify-content:center;text-align:center}.page:before{width:210px;height:150px;top:-80px;left:-100px}.page:after{right:-160px}}
+    @media(max-width:380px){.brand-logo{width:58px;height:52px}.brand-name{font-size:14px}.top-link{font-size:11px;padding:10px 12px}.btn{width:100%}.service-points{grid-template-columns:1fr}.visual{min-height:460px}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <a class="brand" href="#home" aria-label="GadgetCare beranda">
+      <img class="brand-logo" src="assets/gadgetcare-logo.png" alt="Logo GadgetCare">
+      <div class="brand-name">GADGETCARE<span>SMARTPHONE SERVICE</span></div>
+    </a>
+    <a class="top-link" href="https://gadgetcare.web.id" target="_blank" rel="noopener noreferrer">Kunjungi Website ↗</a>
+  </header>
+
+  <main id="home">
+    <section class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span> Servis HP panggilan</div>
+      <h1>ABDUL<span>AZIS.</span></h1>
+      <p class="intro">HP bermasalah? Teknisi siap membantu! Tak perlu repot keluar rumah untuk memperbaiki HP. GadgetCare membantu Anda mendapatkan layanan servis HP panggilan dengan proses pemesanan yang mudah, informasi biaya yang jelas, dan pemantauan status perbaikan secara online.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://gadgetcare.web.id" target="_blank" rel="noopener noreferrer">BOOKING SEKARANG <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-secondary" href="#sosial">Ikuti Media Sosial</a>
+      </div>
+      <nav class="socials" id="sosial" aria-label="Media sosial GadgetCare">
+        <a class="social social-image" href="https://www.threads.com/@abd_ulaziys" target="_blank" rel="noopener noreferrer" aria-label="Threads" title="Threads"><img src="assets/threads.png" alt=""></a>
+        <a class="social social-image" href="https://www.tiktok.com/@abd_ulaziys" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok"><img src="assets/tiktok.png" alt=""></a>
+        <a class="social social-image" href="https://www.instagram.com/abd_ulaziys/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><img src="assets/instagram.png" alt=""></a>
+        <span class="social-label">Terhubung dengan saya</span>
+      </nav>
+    </section>
+
+    <section class="visual" aria-label="Profil teknisi GadgetCare">
+      <div class="halo"></div>
+      <div class="floating-tag"><span>●</span> Siap membantu perangkatmu</div>
+      <div class="tech-card">
+        <img class="avatar" src="assets/abdul-azis.png" alt="Foto Abdul Azis, teknisi GadgetCare">
+        <h2>Abdul Azis</h2>
+        <div class="role">Teknisi GadgetCare</div>
+        <div class="card-rule"></div>
+        <div class="service-points">
+          <div class="point"><b><span class="point-icon">✓</span>Praktis</b>Pemesanan mudah secara online</div>
+          <div class="point"><b><span class="point-icon">✓</span>Transparan</b>Informasi biaya yang jelas</div>
+          <div class="point"><b><span class="point-icon">✓</span>Panggilan</b>Servis tanpa repot keluar</div>
+          <div class="point"><b><span class="point-icon">✓</span>Terpantau</b>Status perbaikan online</div>
+        </div>
+        <div style="margin-top:23px"><a class="btn btn-primary" style="width:100%" href="https://gadgetcare.web.id" target="_blank" rel="noopener noreferrer">Mulai Booking ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> GadgetCare · Abdul Azis</span>
+    <span>Servis HP lebih praktis. <a href="https://gadgetcare.web.id" target="_blank" rel="noopener noreferrer">gadgetcare.web.id</a></span>
+  </footer>
+</div>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
