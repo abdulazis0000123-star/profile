@@ -33,8 +33,9 @@
     
     /* Style Alamat & Tombol Maps */
     .address-text{display:block;font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px}
-    .btn-maps{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--white);text-decoration:none;border:1px solid #ffffff33;padding:8px 16px;border-radius:999px;transition:.2s;margin-bottom:20px}
-    .btn-maps:hover{border-color:var(--red);color:var(--red);background:#ffffff05}
+    .btn-maps{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:#080808;background:var(--red);text-decoration:none;padding:9px 18px;border-radius:999px;transition:.2s;margin-bottom:20px;box-shadow:0 6px 20px #F7511F35}
+    .btn-maps:hover{background:var(--red-dark);color:#ffffff;transform:translateY(-2px)}
+    .maps-icon{width:18px;height:18px;object-fit:contain;display:block}
 
     .intro{font-size:15.5px;line-height:1.75;color:#d0d0d0;max-width:520px;margin:0 0 24px}
     .actions{display:flex;gap:13px;flex-wrap:wrap}
@@ -111,12 +112,12 @@
       <div class="eyebrow"><span class="dot"></span> Servis HP panggilan</div>
       <h1>GADGET<span>CARE</span></h1>
       
-      <!-- Alamat dibuat lebih kecil -->
+      <!-- Alamat kecil -->
       <span class="address-text">Dusun. Sindanglaya RT.001 RW.007 Desa. Sindangsari Kec. Sukasari Kab. Sumedang, Jawa Barat | 45366</span>
       
-      <!-- Tombol Google Maps -->
+      <!-- Tombol Google Maps Oranye dengan Logo Maps-logo.png -->
       <a class="btn-maps" href="https://maps.app.goo.gl/3Ztha5x75HSjMAhw9" target="_blank" rel="noopener noreferrer">
-        📍 Open in Google Maps ↗
+        <img class="maps-icon" src="./Maps-logo.png" alt="Logo Maps"> Open in Google Maps ↗
       </a>
 
       <p class="intro">HP Bermasalah? Teknisi Siap Membantu! Tak perlu repot keluar rumah untuk memperbaiki HP. GadgetCare membantu Anda mendapatkan layanan servis HP panggilan dengan proses pemesanan yang mudah, informasi biaya yang jelas, dan pemantauan status perbaikan secara online.</p>
