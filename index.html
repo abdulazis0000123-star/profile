@@ -1,4 +1,4 @@
-p<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -28,8 +28,14 @@ p<!DOCTYPE html>
     main{width:min(1080px,100%);margin:auto;padding:10px 20px 30px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;flex:1}
     .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--red);font-size:12px;letter-spacing:2.5px;font-weight:850;text-transform:uppercase}
     .dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 15px var(--red)}
-    h1{font-size:clamp(40px,5.5vw,76px);line-height:.92;letter-spacing:-3px;margin:18px 0 18px;font-weight:1000}
+    h1{font-size:clamp(40px,5.5vw,76px);line-height:.92;letter-spacing:-3px;margin:18px 0 12px;font-weight:1000}
     h1 span{display:block;color:var(--red);-webkit-text-stroke:1px var(--red)}
+    
+    /* Style Alamat & Tombol Maps */
+    .address-text{display:block;font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+    .btn-maps{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--white);text-decoration:none;border:1px solid #ffffff33;padding:8px 16px;border-radius:999px;transition:.2s;margin-bottom:20px}
+    .btn-maps:hover{border-color:var(--red);color:var(--red);background:#ffffff05}
+
     .intro{font-size:15.5px;line-height:1.75;color:#d0d0d0;max-width:520px;margin:0 0 24px}
     .actions{display:flex;gap:13px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;padding:15px 28px;border-radius:999px;font-weight:850;font-size:15px;transition:transform .2s,background .2s}
@@ -104,8 +110,15 @@ p<!DOCTYPE html>
     <section class="hero-copy">
       <div class="eyebrow"><span class="dot"></span> Servis HP panggilan</div>
       <h1>GADGET<span>CARE</span></h1>
-      <br>
-      <span>Dusun. Sindanglaya RT.001 RW.007 Desa. Sindangsari Kec. Sukasari Kab. Sumedang | Jawa Barat 45366</span>
+      
+      <!-- Alamat dibuat lebih kecil -->
+      <span class="address-text">Dusun. Sindanglaya RT.001 RW.007 Desa. Sindangsari Kec. Sukasari Kab. Sumedang, Jawa Barat | 45366</span>
+      
+      <!-- Tombol Google Maps -->
+      <a class="btn-maps" href="https://maps.app.goo.gl/3Ztha5x75HSjMAhw9" target="_blank" rel="noopener noreferrer">
+        📍 Open in Google Maps ↗
+      </a>
+
       <p class="intro">HP Bermasalah? Teknisi Siap Membantu! Tak perlu repot keluar rumah untuk memperbaiki HP. GadgetCare membantu Anda mendapatkan layanan servis HP panggilan dengan proses pemesanan yang mudah, informasi biaya yang jelas, dan pemantauan status perbaikan secara online.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://gadgetcare.web.id" target="_blank" rel="noopener noreferrer">BOOKING SEKARANG <span aria-hidden="true">↗</span></a>
@@ -125,7 +138,7 @@ p<!DOCTYPE html>
             <a class="social social-image" href="https://www.threads.com/@abd_ulaziys" target="_blank" rel="noopener noreferrer" aria-label="Threads" title="Threads"><img src="./threads.png" alt="Threads"></a>
             <a class="social social-image" href="https://www.tiktok.com/@abd_ulaziys" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok"><img src="./tiktok.png" alt="TikTok"></a>
             <a class="social social-image" href="https://www.instagram.com/abd_ulaziys/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><img src="./instagram.png" alt="Instagram"></a>
-            <a class="social social-image" href="https://www.youtube.com/@abd_ulaziys" target="_blank" rel="noopenrt noreferrer" arial-label="YouTube" title="YouTube"><img src="./YouTube.png" alt="YouTube"></a>
+            <a class="social social-image" href="https://www.youtube.com/@abd_ulaziys" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><img src="./YouTube.png" alt="YouTube"></a>
           </nav>
         </div>
 
